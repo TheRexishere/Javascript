@@ -1,0 +1,32 @@
+<script>
+// Ordering in Sweet Shop
+
+document.write("Hello ! Welcome to Shivam Sweets");
+document.write("<br>");
+var choice = prompt("Would you like Samosa or Kachori ?");
+
+if(choice == "samosa"){
+    var choice = prompt("Would you like chatni along with Samosa?");
+    
+    if (choice == "yes"){
+        document.write("You have ordered Samosa with chatni");
+    }
+    else if(choice == "no"){
+        document.write("You have ordered Samosa only");
+    }
+}
+else if(choice == "kachori"){
+    var choice = prompt("Would you like Sauce along with Kachori?");
+    
+    if (choice == "yes"){
+        document.write("You have ordered Kachori with Sauce");
+    }
+    else if(choice == "no"){
+        document.write("You have ordered Kachori only");
+    }
+}
+
+document.write("<br>");
+document.write("Have a Good Day !!");
+
+</script>

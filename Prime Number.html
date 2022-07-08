@@ -1,0 +1,28 @@
+<script>
+    
+    var range = prompt("Enter the Range:");
+    range = parseInt(range);
+    document.write("Prime number in Range 2 to "+range+":<br>");
+
+    var Array = [], k = 0;
+    
+    for(i = 2 ; i < range+1 ; i++){
+        
+        var token = 0;
+        
+        for(j = 2; j < i/2; j++){
+            
+            if(i%j == 0){
+                token = 1;
+                break;
+            }
+        }
+
+        if(token == 0){
+            Array[k] = i;
+            k++;
+        }
+    }
+
+    document.write(Array);
+</script>

@@ -1,0 +1,75 @@
+<script>
+
+// Login Prompt
+
+document.write("Welcome to the Snacks Shop <br>");
+document.write("Please Set Your Account<br>");
+
+var name = prompt("Please Enter Your Name :");
+var pass = prompt("Enter Your Password:");
+
+document.write("Account Set Successfully! Please Login.<br>");
+
+var nametry = prompt("Enter Your Name:");
+var passtry = prompt("Enter Your Password:");
+
+// Loop for Checking
+
+while(nametry != name || passtry != pass){
+    document.write("Enter Correct Name and Password:<br>");
+    nametry = prompt("Enter Your Name:");
+    passtry = prompt("Enter Your Password:");
+}
+
+document.write("Logged in Succesfully!!<br>");
+
+// Menu
+
+var choice,burger = 0,pizza = 0,tip = 0,amount = 0,amount_tax = 0,pay = 0;
+
+document.write("Menu:<br>");
+document.write("1)Burger $15 each. <br>");      
+document.write("2)Pizza $20 each. <br>");        
+document.write("3)Add Tip. <br>");
+document.write("4)Total Amount With Tax. <br>");  // 20% Tax
+document.write("5)Pay Amount. <br>");
+
+while(true){
+choice = prompt("Your Choice:");
+
+if(choice == 1){    // Burger
+    burger = prompt("Enter Quantity:");
+    amount += burger*15; 
+}
+else if(choice == 2){   // Pizza
+    pizza = prompt("Enter Quantity:");
+    amount += pizza*20;
+}
+else if(choice == 3){   // Tip
+    tip = prompt("Enter Tip:");
+    amount += parseInt(tip); 
+}
+else if(choice == 4){   // Amount With Tax
+    amount_tax = amount + amount*.2;
+    document.write("<br>Total Amount with Tax: $"+amount_tax);
+}
+else if(choice == 5){   // Make Payment
+    
+    amount_tax = amount + amount*.2;
+    document.write("<br>Total Amount with Tax: $"+amount_tax);
+    
+    pay = prompt("Pay:");
+    
+    if(pay < amount_tax){
+        document.write("<br>Total Amount with Tax: $"+amount_tax+" and You Paid: $"+pay);
+    }
+    else{
+        document.write("<br>Change: $"+(pay-amount_tax));
+        break;
+    }
+}
+}
+
+document.write("<br>Thanks for the Visit, Have a Great Day!!");
+
+</script>
